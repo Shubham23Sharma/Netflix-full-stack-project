@@ -29,56 +29,93 @@ box-sizing: border-box;
 }
 
 .signinform{
+	
+	
+	width: 25vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	background-color: rgb(42, 43, 42);
+	opacity: 0.9;
+	height: 75vh;
+	color: rgb(225, 227, 225);
+	margin-left: 35%;
+
+	
+}
+
+input{
+
+height: 8vh;
+width: 15vw;
+background-color: rgb(42, 43, 42);
+color: rgb(225, 227, 225);
+
+}
+
+::placeholder{
+
+color: rgb(225, 227, 225);
+
+}
+
+a{
+
+text-decoration: none;
+color: rgb(225, 227, 225);
+
+}
 
 
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+
+ul a{
 color: white;
-background-color: grey;
-border: 2px solid grey;
-
-
-}
-
-.RememberMe{
-display: flex;
-
+font-weight: bold;
+font-size: 25px;
 
 }
+
 
 </style>
 </head>
 <body>
 		<div class="background"></div>
-		<img alt="" src="png-transparent-netflix-logo-netflix-television-show-streaming-media-film-netflix-logo-television-text-trademark-thumbnail-removebg-preview.png" height="80vh">
 		
-		<form action="startpage">
+		<div style="position:relative;  top: 5vh;">
+	
+	<ul style="display: flex; justify-content: space-around; list-style-type: none; ">
+		<a href="home.jsp"><img alt="" src="png-transparent-netflix-logo-netflix-television-show-streaming-media-film-netflix-logo-television-text-trademark-thumbnail-removebg-preview.png" height="80vh"></a>
+		<li><a href="home.jsp">Home</a></li>
+		<li><a href="#">About Us</a> </li>
+		<li><a href="#">Contact Us</a></li>
 		
+		<li><form action="userLogin" method="post"><input type="submit" value="SignIn" name="userSignIn" style="background-color: red; color: white; border: none;  border-radius: 10px; text-align: center; height: 30px; width: 80px;" ></form></li>
+		
+	</ul>
+	
+	</div>
 		<div class="signinform">
-		
-		<h2>Sign In</h2>
-		
+		<form action="startpage" method="post">
+		<h2 style="color: white;">Sign In</h2>
 		<input type="text" placeholder="Email or mobile number" name="email"> <br> <br>
-		
-		<input type="password" placeholder="password" name="password"> <br> <br>
-		
-		<input type="submit" value="Sign In" name="signin">
-		
+		<input type="password" placeholder="Password" name="password"> <br> <br>
+		<div style="display: flex; position: relative; flex-direction: column; gap:20px; justify-content: center; align-items: center;">
+		<input type="submit" value="Sign In" name="signin" style="background-color: red; height: 5vh">
 		<p>OR</p>
-		
 		<input type="submit" value="Use a sign-in code">
-		
 		<p>Forgot Password?</p>
-		<div class="RememberMe">
-		<input type="checkbox" value="Remember me" id="rem">
+		<div class="RememberMe" style="display: flex;">
+		<input type="checkbox" value="Remember me" id="rem" style="height: 2vh; width: 2vw;">
 		<label for="rem">Remember Me
 		</label>
 		</div>
-		
-
+		<p>New to Netflix?<a href="#" style="font-weight: bold;">Sign Up Now</a></p>
 		</div>
 		</form>
+
+		</div>
+		
 </body>
 </html>

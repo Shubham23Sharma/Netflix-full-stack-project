@@ -20,8 +20,8 @@ public class UserLoginController extends HttpServlet{
 		
 		UserDao dao = new UserDao();
 		
-		String email = req.getParameter("userEmail");
-		String password = req.getParameter("userPassword");
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
 		
 		User user=dao.fetchUserByEmailDao(email);
 		

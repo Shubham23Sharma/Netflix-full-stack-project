@@ -35,6 +35,7 @@ font-size: 25px;
 	position:relative;
 	top: 25vh;
 	font-weight: bold;
+	opacity: 10;
 
 }
 .background {
@@ -72,7 +73,7 @@ font-size: 25px;
 	
 	<ul style="display: flex; justify-content: space-around; list-style-type: none; ">
 		<li><img alt="" src="png-transparent-netflix-logo-netflix-television-show-streaming-media-film-netflix-logo-television-text-trademark-thumbnail-removebg-preview.png" height="80vh"></li>
-		<li><a href="#">Home</a></li>
+		<li><a href="home.jsp">Home</a></li>
 		<li><a href="#">About Us</a> </li>
 		<li><a href="#">Contact Us</a></li>
 		
