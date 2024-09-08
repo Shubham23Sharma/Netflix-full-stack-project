@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 /**
- * @author Mohammed Masood Ansari
+ * @author Shubham Sharma
  * this is java POJO(plain old java object) class
  */
 public class User {

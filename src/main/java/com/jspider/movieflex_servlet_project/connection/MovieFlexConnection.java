@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class MovieFlexConnection {
 
 	/*
-	 * connection method
+	 * Connection method
 	 */
 	public static Connection getMovieFlexConnection() {
 

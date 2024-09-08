@@ -20,7 +20,7 @@ public class AdminLogoutController extends HttpServlet {
 		if(httpSession.getAttribute("adminSession")!=null) {
 			httpSession.invalidate();
 			req.setAttribute("adminMsg", "You are logged out successfully");
-			req.getRequestDispatcher("admin-login.jsp").forward(req, resp);;
+			req.getRequestDispatcher("admin-login.jsp").forward(req, resp);
 		}
 	}
 }

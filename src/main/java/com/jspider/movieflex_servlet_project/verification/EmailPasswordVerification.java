@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 /**
  * 
- *@author Mohammed Masood Ansari
+ *@author Shubham Sharma
  *
  */
 public class EmailPasswordVerification {

@@ -1,79 +1,125 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<!-- Font Awesome -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-	rel="stylesheet" />
-<!-- Google Fonts -->
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-	rel="stylesheet" />
-<!-- MDB -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
-	rel="stylesheet" />
+
+<style type="text/css">
+
+
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+
+}
+
+.background {
+    background: url('https://png.pngtree.com/thumb_back/fh260/background/20191113/pngtree-blue-film-technology-film-background-image_322042.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   	z-index: -1;
+    opacity: 0.9; /* Adjust opacity to make the image more transparent */
+}
+
+.signinform{
+	
+	
+	width: 25vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	background-color: #FFFFFF;
+	height: 75vh;
+	color:black;
+	margin-left: 35%;
+	border-radius: 25px;
+
+	
+}
+
+input{
+
+height: 8vh;
+width: 15vw;
+border-radius: 15px;
+
+
+}
+
+::placeholder{
+
+color: rgb(225, 227, 225);
+
+}
+
+a{
+
+text-decoration: none;
+color: rgb(225, 227, 225);
+
+}
+
+
+
+ul a{
+color: white;
+font-weight: bold;
+font-size: 25px;
+
+}
+
+
+</style>
 </head>
 <body>
-
-	<%
-	String adminMsg = (String) request.getAttribute("adminMsg");
-	%>
-
-	<section class="vh-100" style="background-color: #9A616D;">
-		<div class="container py-5 h-100">
-			<div
-				class="row d-flex justify-content-center align-items-center h-100">
-				<div class="col col-xl-10">
-					<div class="card" style="border-radius: 1rem;">
-						<div class="row g-0">
-							<div class="col-md-6 col-lg-5 d-none d-md-block">
-								<img
-									src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-									alt="login form" class="img-fluid"
-									style="border-radius: 1rem 0 0 1rem;" />
-							</div>
-							<div class="col-md-6 col-lg-7 d-flex align-items-center">
-								<div class="card-body p-4 p-lg-5 text-black">
-
-									<%
-									if (adminMsg != null) {
-									%>
-									<h5 style="color: red;"><%=adminMsg%></h5>
-
-									<%
-									}
-									%>
-									<form action="adminLogin" method="post">
-									
-									
-									<label>
-									UserName:
-									<input type="text" placeholder="Enter your Email" name="adminEmail">									
-									</label> <br> <br>
-									
-									<label>
-									Password:
-									<input type="password" placeholder="Enter your Password" name="adminPassword">									
-									</label> <br> <br>
-									
-									<input type="submit" value="LogIn" style="margin-left: 30px">
-									<a href="#" style="margin-left: 50px;">Forgot Password?</a>
-									
-									
-									</form>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="background"></div>
+		
+		<div style="position:relative;  top: 5vh;">
+	
+	<ul style="display: flex; justify-content: space-around; list-style-type: none; ">
+		<a href="home.jsp"><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrek_NkgFxYQnQ0jzLnZ1UVlIHVWUek0lLA&s" height="80vh"></a>
+		<li><a href="home.jsp">Home</a></li>
+		<li><a href="#">About Us</a> </li>
+		<li><a href="#">Contact Us</a></li>
+		
+		<li>
+		
+		
+		<form action="userLogin" method="post"><input type="submit" value="SignIn" name="userSignIn" style="background-color: red; color: white; border: none;  border-radius: 10px; text-align: center; height: 40px; width: 80px; font-size: 18px; cursor: pointer;'" ></form></li>
+		
+	</ul>
+	
+	</div>
+		<div class="signinform">
+		<form action="userLogin" method="post">
+		<h2 style="color: black;">Sign In</h2> <br>
+		<input type="text" placeholder="Email or mobile number" name="email"> <br> <br>
+		<input type="password" placeholder="Password" name="password"> <br> <br>
+		<div style="display: flex; position: relative; flex-direction: column; gap:20px; justify-content: center; align-items: center;">
+		<input type="submit" value="Sign In" name="signin" style="background-color: red; height: 5vh">
+		<p>OR</p>
+		<input type="submit" value="Use a sign-in code">
+		<p>Forgot Password?</p>
+		<div class="RememberMe" style="display: flex;">
+		<input type="checkbox" value="Remember me" id="rem" style="height: 2vh; width: 2vw;">
+		<label for="rem">Remember Me
+		</label>
 		</div>
-	</section>
+		<p>New to Movieflex?<a href="user-registration.jsp" style="font-weight: bold; color: black;">Sign Up Now</a></p>
+	
+		</div>
+		</form>
+
+	</div>
+		
 </body>
 </html>

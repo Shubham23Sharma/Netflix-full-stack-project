@@ -1,7 +1,7 @@
 package com.jspider.movieflex_servlet_project.dto;
 
 /**
- * @author MOHAMMAD MASOOD ANSARI
+ * @author Shubham Sharma
  * this is my encapsulation class
  * which will help me for admin login
  */

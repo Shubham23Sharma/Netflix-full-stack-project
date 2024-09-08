@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
-@WebServlet(value = "/userRegistration")
+@WebServlet(value = "/signUpForm")
 public class UserRegisterController extends HttpServlet{
 
 		@Override
@@ -26,19 +26,19 @@ public class UserRegisterController extends HttpServlet{
 			String email = EmailPasswordVerification.emailVerification(req.getParameter("email"));
 			String password = EmailPasswordVerification.passwordVerification(req.getParameter("password"));
 			String gender = req.getParameter("gender");
-			LocalDate date = LocalDate.parse(req.getParameter("dob"));
-			Part image  = req.getPart("image");
+			LocalDate date = LocalDate.parse(req.getParameter("date"));
+//			Part image  = req.getPart("image");
 			long phone  = Long.parseLong(req.getParameter("phone"));
 			
 			
 			if((email!=null)&&(password!=null)) {
 				User user = new User(name, email, password, date, phone, gender);
 				service.userRegistrationService(user);
-				req.getRequestDispatcher("user-login.jsp").forward(req, resp);;
+				req.getRequestDispatcher("user-login.jsp").forward(req, resp);
 			}else {
 				req.setAttribute("userMsg", "email must contain @. and number (abc123@gmail.com)");
 				req.setAttribute("userPass", "password must contain any one special char,number,alphabet one Uppercase,one Lowercase");
-				req.getRequestDispatcher("user-registration.jsp").forward(req, resp);;
+				req.getRequestDispatcher("user-registration.jsp").forward(req, resp);
 			}
 		}
 }

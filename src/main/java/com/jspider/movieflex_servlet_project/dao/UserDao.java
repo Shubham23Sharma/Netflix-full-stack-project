@@ -11,7 +11,7 @@ import com.jspider.movieflex_servlet_project.verification.EmailPasswordVerificat
 
 /**
  * 
- *@author Mohammed Masood Ansari
+ *@author Shubham Sharma
  */
 public class UserDao {
 	

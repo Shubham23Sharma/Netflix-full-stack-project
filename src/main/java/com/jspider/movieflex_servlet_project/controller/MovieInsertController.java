@@ -47,10 +47,10 @@ public class MovieInsertController extends HttpServlet {
 		if(httpSession.getAttribute("adminSession")!=null) {
 			dao.saveMovieDao(movie);
 			req.setAttribute("adminMsg", "Movie Registered SuccessFully...");
-			req.getRequestDispatcher("admin-home.jsp").forward(req, resp);;
+			req.getRequestDispatcher("admin-home.jsp").forward(req, resp);
 		}else {
 			req.setAttribute("adminMsg", "Your Session is out please logged in");
-			req.getRequestDispatcher("admin-login.jsp").forward(req, resp);;
+			req.getRequestDispatcher("admin-login.jsp").forward(req, resp);
 		}
 	}
 	

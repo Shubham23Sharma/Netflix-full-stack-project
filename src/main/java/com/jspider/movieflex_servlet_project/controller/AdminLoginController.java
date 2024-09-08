@@ -33,7 +33,7 @@ public class AdminLoginController  extends HttpServlet{
 			if(admin.getAdminPassword().equals(password)) {
 				httpSession.setAttribute("adminSession", email);
 				httpSession.setMaxInactiveInterval(220);
-				req.getRequestDispatcher("admin-home.jsp").forward(req, resp);
+				req.getRequestDispatcher("movie-register.jsp").forward(req, resp);
 			}else {
 				req.setAttribute("adminMsg", "password is invalid");
 				req.getRequestDispatcher("admin-login.jsp").forward(req, resp);

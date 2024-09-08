@@ -28,7 +28,7 @@ public class UserLoginController extends HttpServlet{
 		if(user!=null) {
 			
 			if(user.getPassword().equals(password)) {
-				req.getRequestDispatcher("user-home.jsp").forward(req, resp);
+				req.getRequestDispatcher("movie-register.jsp").forward(req, resp);
 			}else {
 				req.setAttribute("userMsg", "password is invalid");
 				req.getRequestDispatcher("user-login.jsp").forward(req, resp);

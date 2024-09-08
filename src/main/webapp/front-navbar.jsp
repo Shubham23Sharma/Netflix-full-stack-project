@@ -6,81 +6,83 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style type="text/css">
-body {
-	margin: 0;
-	font-family: Arial, sans-serif;
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+color: white;
+
+}
+a{
+
+text-decoration: none;
+
+
 }
 
-.navbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #333;
-	padding: 10px 0;
-	z-index: 1000;
-}
+ul a{
+color: white;
+font-weight: bold;
+font-size: 25px;
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 20px;
+}
+.section{
+	
 	display: flex;
-	justify-content: space-between;
+	flex-direction:column;
+	justify-content: center;
 	align-items: center;
+	position:relative;
+	top: 25vh;
+	font-weight: bold;
+	opacity: 10;
+
+}
+.background {
+    background: url('https://techovedas.com/wp-content/uploads/2024/04/netflix-octobre-contenus-2022.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   	z-index: -1;
+    opacity: 0.9; /* Adjust opacity to make the image more transparent */
 }
 
-.logo {
-	color: #fff;
-	margin: 0;
+.transparent-input::placeholder {
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7); /* Optional: Adjust color and transparency */
+    font-size: 2.5vh;
+    
 }
-
-.nav-links {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.inline-container{
+	
 	display: flex;
-}
 
-.nav-links li {
-	margin-right: 20px;
-}
-
-.nav-links li a {
-	color: #fff;
-	text-decoration: none;
-	transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-	color: #ddd;
-}
-
-.auth-links a {
-	color: #fff;
-	text-decoration: none;
-	margin-left: 20px;
-}
-
-.auth-links a:hover {
-	color: #ddd;
 }
 </style>
 </head>
 <body>
-	<nav class="navbar">
-		<div class="container">
-			<h1 class="logo">MovieFlex</h1>
-			
-			<form action="/searchMovie">
-				<input type="text" name="search" placeholder="enter movie name">
-				<input type="submit" value="search">
-			</form>
-			
-			<div class="auth-links">
-				<a href="#">Login</a> <a href="#">Sign Up</a>
-			</div>
-		</div>
-	</nav>
+	<%
+	String adminMsg = (String) request.getAttribute("adminMsg");
+	%>
+	<div class="background"></div>
+	<div style="position:relative;  top: 5vh;">
+	
+	<ul style="display: flex; justify-content: space-around; list-style-type: none; ">
+		<li><img alt="" src="png-transparent-netflix-logo-netflix-television-show-streaming-media-film-netflix-logo-television-text-trademark-thumbnail-removebg-preview.png" height="80vh"></li>
+		<li><a href="home.jsp">Home</a></li>
+		<li><a href="#">About Us</a> </li>
+		<li><a href="#">Contact Us</a></li>
+		
+		<li><form action="userLogin" method="post"><input type="submit" value="SignIn" name="userSignIn" style="background-color: red; color: white; border: none;  border-radius: 10px; text-align: center; height: 30px; width: 80px;" ></form></li>
+		
+	</ul>
+	
+	</div>
+	
+	
+	
 </body>
 </html>

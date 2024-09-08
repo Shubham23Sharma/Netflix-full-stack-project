@@ -9,7 +9,7 @@ import com.jspider.movieflex_servlet_project.connection.MovieFlexConnection;
 import com.jspider.movieflex_servlet_project.dto.Admin;
 
 /**
- * @author Mohammed Masood Ansari
+ * @author Shubham Sharma
  */
 public class AdminDao {
 

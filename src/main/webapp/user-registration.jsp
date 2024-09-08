@@ -5,7 +5,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
 <style type="text/css">
 
 
@@ -28,7 +27,7 @@ box-sizing: border-box;
     opacity: 0.9; /* Adjust opacity to make the image more transparent */
 }
 
-.signinform{
+.signUpForm{
 	
 	
 	width: 25vw;
@@ -38,7 +37,7 @@ box-sizing: border-box;
 	align-items: center;
 	background: transparent;
 	background-color: #FFFFFF;
-	height: 75vh;
+	height: 80vh;
 	color:black;
 	margin-left: 35%;
 	border-radius: 25px;
@@ -81,45 +80,42 @@ font-size: 25px;
 </style>
 </head>
 <body>
-		<div class="background"></div>
-		
-		<div style="position:relative;  top: 5vh;">
+
+		<%
+	String adminMsg = (String) request.getAttribute("adminMsg");
+	%>
+	<div class="background"></div>
+	<div style="position:relative;  top: 5vh;">
 	
 	<ul style="display: flex; justify-content: space-around; list-style-type: none; ">
-		<a href="home.jsp"><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrek_NkgFxYQnQ0jzLnZ1UVlIHVWUek0lLA&s" height="80vh"></a>
+		<li><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwrek_NkgFxYQnQ0jzLnZ1UVlIHVWUek0lLA&s" height="100vh" width="100vw"></li>
 		<li><a href="home.jsp">Home</a></li>
 		<li><a href="#">About Us</a> </li>
 		<li><a href="#">Contact Us</a></li>
 		
-		<li>
-		
-		
-		<form action="userLogin" method="post"><input type="submit" value="SignIn" name="userSignIn" style="background-color: red; color: white; border: none;  border-radius: 10px; text-align: center; height: 40px; width: 80px; font-size: 18px; cursor: pointer;" ></form></li>
+		<li><form action="user-login.jsp" method="post"><input type="submit" value="SignIn" name="userSignIn" style="background-color: red; color: white; border: none;  border-radius: 10px; text-align: center; height: 40px; width: 100px; font-size: 18px; cursor: pointer;" ></form></li>
 		
 	</ul>
 	
 	</div>
-		<div class="signinform">
-		<form action="userLogin" method="post">
-		<h2 style="color: black;">Sign In</h2> <br>
-		<input type="text" placeholder="Email or mobile number" name="email"> <br> <br>
+	
+	<div class="signUpForm">
+		<form action="signUpForm" method="post">
+		<h2 style="color: black;">Sign Up</h2> <br>
+		<input type="text" placeholder="Enter name" name="name"> <br> <br>
+		<input type="email" placeholder="Email" name="email"> <br> <br>
 		<input type="password" placeholder="Password" name="password"> <br> <br>
+		<input type="date" placeholder="DOB" name="date"> <br> <br>
+		<input type="number" placeholder="Phone" name="phone"> <br> <br>
+		<input type="text" placeholder="Gender" name="gender"> <br> <br>
 		<div style="display: flex; position: relative; flex-direction: column; gap:20px; justify-content: center; align-items: center;">
-		<input type="submit" value="Sign In" name="signin" style="background-color: red; height: 5vh">
-		<p>OR</p>
-		<input type="submit" value="Use a sign-in code">
-		<p>Forgot Password?</p>
-		<div class="RememberMe" style="display: flex;">
-		<input type="checkbox" value="Remember me" id="rem" style="height: 2vh; width: 2vw;">
-		<label for="rem">Remember Me
-		</label>
-		</div>
-		<p>New to Netflix?<a href="user-registration.jsp" style="font-weight: bold; color: black;">Sign Up Now</a></p>
+		<input type="submit" value="Sign Up" name="signUp" style="background-color: red; height: 5vh">
+		
 	
 		</div>
 		</form>
 
 	</div>
-		
+
 </body>
 </html>
